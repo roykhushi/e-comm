@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
 import {registerController , loginController , testController} from '../controllers/authController.js';
-import { requireSignIn } from "../middlewares/authMiddleware.js";
+import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 
 
 //router obj (mvc arch)
@@ -11,8 +11,8 @@ router.post("/register", registerController) //due to mvc arch, defining the fun
 router.post("/login", loginController);
 
 
-//test controller (middleware)
-router.get("/test" , requireSignIn, testController);
+// //test controller (middleware)
+router.get("/test" , requireSignIn, isAdmin , testController);
 
 
 export default router;

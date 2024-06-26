@@ -53,8 +53,6 @@ export const registerController = async(req,res) =>{
 
 
 //login credentials (POST)
-
-
 export const loginController = async(req,res) => {
 
     try {
@@ -63,12 +61,12 @@ export const loginController = async(req,res) => {
         const {email,password} = req.body;
 
         //validations
-        if(!email || !password){
-            res.status(404).send({
-                success : false,
-                msg : "Invalid email or password"
-            });
-        }
+        // if(!email || !password){
+        //     res.status(404).send({
+        //         success : false,
+        //         msg : "Invalid email or password"
+        //     });
+        // }
 
         const user = await userModel.findOne({email});
         //user not found while logging

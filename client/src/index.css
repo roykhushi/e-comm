@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  box-shadow: 0 8px 6px -6px gray;
+}
+.brand{
+  width: 35px;
+  height: 35px;
+  color: #0da31c;
+  margin-bottom: 8px;
+}
+.footer-info{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+.footer-info a{
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer-info a:hover{
+  
+}
+
+.pnf{
+  align-items: center;
+  justify-content: center;
+}
+.pnf-btn{
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 25px;
+}
+.pnf-btn:hover{
+  border: #0da31c 1px solid;
+}
+
+
+/* about */
