@@ -49,3 +49,29 @@ nav{
 
 
 /* about */
+
+
+/* register */
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  flex-direction: column;
+}
+
+.login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  flex-direction: column;
+}
+
+/* login btn */
+
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

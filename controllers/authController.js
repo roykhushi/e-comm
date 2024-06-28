@@ -10,15 +10,15 @@ export const registerController = async(req,res) =>{
         const {name,email,password,phone,address,role} = req.body;
 
         //validations
-        if(!name || !email || !password || !address || !phone){
-            res.send({msg: "Kindly enter the required fields"});
-        }
+        // if(!firstName || !lastName || !email || !password || !address || !phone){
+        //     res.send({message: "Kindly enter the required fields"});
+        // }
 
         //checking existing user
         const existingUser = await userModel.findOne({email});
         if(existingUser){
             return res.status(200).send({
-                success : true,
+                success : false,
                 message : "User is already registered please login"
             })
         }
@@ -64,7 +64,7 @@ export const loginController = async(req,res) => {
         // if(!email || !password){
         //     res.status(404).send({
         //         success : false,
-        //         msg : "Invalid email or password"
+        //         message : "Invalid email or password"
         //     });
         // }
 
@@ -73,7 +73,7 @@ export const loginController = async(req,res) => {
         if(!user){
             res.status(404),send({
                 success : false,
-                msg: "Register the user"
+                message: "Register the user"
             })
         }
         //password matching later 
@@ -86,10 +86,10 @@ export const loginController = async(req,res) => {
         //success
         res.status(200).send({
             success : true,
-            msg : "Login successful",
+            message : "Login successful",
             user : {
                 _id: user.id,
-                name : user.name,
+                name: user.name,
                 email : user.email,
                 phone : user.phone,
                 address : user.address 
@@ -103,7 +103,7 @@ export const loginController = async(req,res) => {
         console.log(`Error occurred while logging ${error}`);
         res.status(500).send({
             success : false,
-            msg : "err in login",
+            message : "err in login",
             error,
         })
     }
@@ -113,7 +113,7 @@ export const loginController = async(req,res) => {
 
 export const testController = (req,res) =>{
     res.send({
-        msg: "yo just testing the middlewares"
+        message: "yo just testing the middlewares"
     })
 }
 

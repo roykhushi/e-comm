@@ -1,0 +1,16 @@
+create a feature of forgot password
+check optional chaining  -> done (controller me dikkat thi)
+admin dashboard --> protected routes too 
+private routing
+
+
+check toast notifications 
+seo remaining
+improve ui of user based role 🙏
+
+
+
+
+
+
+
